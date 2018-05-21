@@ -14,6 +14,9 @@ public class practica6 {
 		h1.sumar(h2);
 		System.out.println("La suma de h1 y h2 es:" + Hora.sumar(h1,h2));
 	
+		
+		Empleado emp = new EmpleadorDatos(1, "pepe");
+		emp.verDatos();
 	}
 	
 
