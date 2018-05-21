@@ -24,5 +24,7 @@ public class Empleado {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-public verDatos
+public void verDatos() {
+	System.out.println("Empleado nro" + numero + ":" + nombre);
+}
 }
