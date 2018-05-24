@@ -1,38 +1,21 @@
 package aye2.practica6;
 
-public class Vectores {
-	private float x,y,z;
+public class Vectores extends Punto { //Subclase de punto; toma los x y la y
+	private float z;
 	
 		public Vectores() {
-			x=0;
-			y=0;
 			z=0;
 		}
 		public Vectores (float x, float y, float z) {
-			this.x = x;
-			this.y=y;
+			super(x,y);
 			this.z=z;
 		}
-			
-		public float getx() {
-			return x;
-		}
-		public float gety() {
-			return y;
 		
-	}
-		public float getz() {
+		public float getZ() {
 			return z;
 		}
-		
-		public void setx (float x) {
-			this.x =x;
-		}
-		public void sety (float y) {
-			this.y =y;
-		}
-		public void setz (float z) {
-			this.z =z;
+		public void setZ(float z) {
+			this.z = z;
 		}
 		public String toString() {
 			return "(" + x + "," + y + "," + z + ")";
@@ -45,7 +28,7 @@ public class Vectores {
 	public void sumar (Vectores h2) {
 	x = h2.x;
 	y = h2.y;
-	z =h2.z;
+	z = h2.z;
 	}
 
 		public static Vectores sumar(Vectores v1, Vectores v2) {
