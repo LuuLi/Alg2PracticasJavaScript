@@ -17,6 +17,16 @@ public class practica6 {
 		
 		Empleado emp = new Empleado(1, "pepe");
 		emp.verDatos();
+	
+		Punto p = new Punto(5,6);
+		p.coordenadas();
+		
+		Vectores v1 = new Vectores (1,2,3);
+		Vectores v2 = new Vectores (3,2,1);
+		System.out.println("Las coordenadas de v1 son: " + v1 );
+		v1.sumar(v2);
+		System.out.println("La suma de v1 y v2 es:" + Vectores.sumar(v1,v2));
+		
 	}
 	
 
