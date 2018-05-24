@@ -12,21 +12,6 @@ public class Vectores {
 			this.x = x;
 			this.y=y;
 			this.z=z;
-			corregirvectores();
-		}
-		public void corregirvectores() {
-			if (x<0) {
-				x=0;
-			}else {
-				if (y<0) {
-					y=0;
-				}else {
-					if (z<0) {
-						z=0;
-				
-				}
-			}
-		}
 		}
 			
 		public float getx() {
@@ -61,7 +46,6 @@ public class Vectores {
 	x = h2.x;
 	y = h2.y;
 	z =h2.z;
-	corregirvectores();
 	}
 
 		public static Vectores sumar(Vectores v1, Vectores v2) {
