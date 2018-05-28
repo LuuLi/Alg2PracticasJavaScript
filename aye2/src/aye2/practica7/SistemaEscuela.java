@@ -35,6 +35,9 @@ public class SistemaEscuela {
 		
 		//ArrayList<? extends Persona> per1; para q se pueda hacer per1 = emp1;
 		//per1 = emp1; // se puede decir q ArrayList <Empleado> es subtipo de ArrayList <? estends Persona>
+		Empleado per = new Empleado();
+		per.leer();
+		per.mostrar();
 		
 		 
 		}
