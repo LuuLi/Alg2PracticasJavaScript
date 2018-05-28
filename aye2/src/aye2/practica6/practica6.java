@@ -27,6 +27,9 @@ public class practica6 {
 		v1.sumar(v2);
 		System.out.println("La suma de v1 y v2 es:" + Vectores.sumar(v1,v2));
 		
+		/*Complejo comp = new Complejo(2.2f,3.4f);
+		System.out.println("la suma es:" + comp.sumarenteros());
+		*/
 	}
 	
 

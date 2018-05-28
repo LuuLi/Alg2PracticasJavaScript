@@ -4,6 +4,7 @@ public class Complejo {
 	private int i1,i2;
 	private float f1,f2;
 	private double d1,d2;
+	private static double suma;
 	
 	public Complejo() {
 		i1 = 0;
@@ -13,14 +14,17 @@ public class Complejo {
 		d1 = 0;
 		d2 = 0;
 	}
-	public Complejo(int entero1 , int entero2, float real1, float real2, double complejo1, double complejo2  ) {
+	public Complejo(int entero1 , int entero2) {
 		i1 = entero1;
-		i2 = entero2;
+		i2 = entero2;		
+	}
+	public Complejo(float real1, float real2) {
 		f1 = real1;
 		f2 = real2;
+	}
+	public Complejo(double complejo1, double complejo2  ) {
 		d1 = complejo1;
 		d2 = complejo2;
-		
 	}
 	public int getI1() {
 		return i1;
@@ -58,9 +62,19 @@ public class Complejo {
 	public void setD2(double d2) {
 		this.d2 = d2;
 	}
-	// public static Complejo sumarenteros(Complejo i1, Complejo i2) {
-		 
-		 
+	/*public int sumarenteros() {
+		suma = i1+i2;
+		return (int)suma;
+	}
+	public float sumarenteros() {
+		suma = f1+f2;
+		return (float)suma;
+	}
+	public double sumarenteros() {
+		suma = d1+d2;
+		return (double)suma;
+	} 
+		*/ 
 	 }
 	
 	
