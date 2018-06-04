@@ -1,11 +1,14 @@
 package aye2.practica8;
+import aye2.practica8.MiAppException;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import javax.swing.plaf.
 
 public class PruebaExcepciones {
 	private static final int SIZE_ARREGLO = 10;
 	private static Integer[] arregloInt;
+	
 	public static void ingresarDatoArray(int indice) {//metodo q la lanza
 		try{
 			arregloInt[indice] = 15;
@@ -20,7 +23,7 @@ public class PruebaExcepciones {
 		}
 	}
 }
-	public static void ingrsrarDatoArray2(int indice) throws Exception{
+	public static void ingresarDatoArray2(int indice) throws MiAppException{
 		try {
 			arregloInt[indice] = 15;
 		}catch(ArrayIndexOutOfBoundsException e) {
@@ -46,12 +49,27 @@ public class PruebaExcepciones {
 		
 		return indice;
 	}
-	
+	public static int leerIndice2() {
+		
+		return tecladoMain.nextInt();
+	}
 	public static void main(String[] args) {
-		Integer[] arregloInt = new Integer[SIZE_ARREGLO];			 
-		ingresarDatoArray(leerIndice()); //metodo q la invoca
-		//arregloInt[indice] = 15;
+		Scanner tecladoMain;
+	
+		tecladoMain = new Scanner(System.in);
+		arregloInt = new Integer[SIZE_ARREGLO];	
+		//int indice = leerIndice();
+			//ingresarDatoArray(indice); //metodo q la invoca
+				//arregloInt[indice] = 15;
+		try {
+			int indice = leerIndice2();
+			ingresarDatoArray2(indice);
+		}catch(MiAppException e) {
+			System.out.println(e);
+		}catch (InputMismatchException e) {
+		tecladoMain.close();
 		System.out.println("Termina OK");
 	}
 
+}
 }
